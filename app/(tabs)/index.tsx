@@ -4,8 +4,11 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { uint8ArrayToMessageData } from '@/constants/Buffers';
 
 export default function HomeScreen() {
+  const messageData = uint8ArrayToMessageData(new Uint8Array([1, 2, 3, 4, 5]));
+  console.log(messageData);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
